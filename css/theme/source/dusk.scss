@@ -1,0 +1,89 @@
+/**
+ * Black theme for reveal.js.
+ *
+ * Copyright (C) 2011-2012 Hakim El Hattab, http://hakim.se
+ */
+
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+
+// Include theme-specific fonts
+@import url(https://fonts.googleapis.com/css?family=Montserrat:700);
+@import url("https://fonts.googleapis.com/css?family=Open + Sans:400,700,400italic,700italic");
+@import url("https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;600&display=swap");
+
+@import url(../../lib/font/fira-code/fira_code.css);
+@import url(../../lib/font/script12-bt/script12-bt.css);
+
+// Override theme settings (see ../template/settings.scss)
+$backgroundColor: #111;
+
+$codeFont: "Fira Code";
+
+$mainFont: "Hind Siliguri", sans-serif;
+$linkColor: #e7ad52;
+$linkColorHover: lighten($linkColor, 20%);
+$headingFont: "Hind Siliguri", sans-serif;
+$headingFontWeight: bold;
+$headingTextShadow: none;
+$headingLetterSpacing: -0.03em;
+$headingTextTransform: none;
+$selectionBackgroundColor: #e7ad52;
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------
+
+body {
+  background-image: url(../../img/header.svg);
+  background-repeat: no-repeat;
+  background-size: 100vw;
+  background-color: white;
+}
+
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4,
+.reveal h5,
+.reveal p {
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.8);
+}
+
+.reveal h1:empty::after {
+  content: "";
+  display: block;
+  width: auto;
+  height: 1em;
+  background-image: url(../../img/logo_dusk.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+
+.rust-logo,
+.wa {
+  height: 150px;
+  width: 150px;
+  display: block;
+  margin: auto !important;
+  background-image: url(https://webassembly.org/css/webassembly.svg);
+  background-size: 90%;
+  background-repeat: no-repeat;
+  background-color: white;
+  background-position: 50%;
+}
+
+.rust-logo {
+  background-image: url(https://rustacean.net/assets/rustacean-flat-happy.png);
+}
+
+:not(pre) code {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+li {
+  text-shadow: 2px 2px black;
+}

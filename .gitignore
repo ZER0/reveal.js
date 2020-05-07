@@ -2,6 +2,7 @@
 *.iml
 *.iws
 *.eml
+*.lock
 out/
 .DS_Store
 .svn
